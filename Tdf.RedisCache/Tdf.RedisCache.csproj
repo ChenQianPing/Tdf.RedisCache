@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{186A45BC-8D0D-4E61-AE0C-6DB7CDC56A6C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tdf.RedisCache</RootNamespace>
+    <AssemblyName>Tdf.RedisCache</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ServiceStack, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Vendors\ServiceStack.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Vendors\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.ServiceInterface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Vendors\ServiceStack.ServiceInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RedisBase.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\MasterRedis-3.2.100\EventLog.dll" />
+    <Content Include="Resources\MasterRedis-3.2.100\redis-benchmark.exe" />
+    <Content Include="Resources\MasterRedis-3.2.100\redis-check-aof.exe" />
+    <Content Include="Resources\MasterRedis-3.2.100\redis-cli.exe" />
+    <Content Include="Resources\MasterRedis-3.2.100\redis-server.exe" />
+    <Content Include="Resources\MasterRedis-3.2.100\server_log.txt" />
+    <Content Include="Resources\SlaveRedis-3.2.100\EventLog.dll" />
+    <Content Include="Resources\SlaveRedis-3.2.100\redis-benchmark.exe" />
+    <Content Include="Resources\SlaveRedis-3.2.100\redis-check-aof.exe" />
+    <Content Include="Resources\SlaveRedis-3.2.100\redis-cli.exe" />
+    <Content Include="Resources\SlaveRedis-3.2.100\redis-server.exe" />
+    <Content Include="Resources\SlaveRedis-3.2.100\server_log.txt" />
+    <Content Include="Vendors\ServiceStack.dll" />
+    <Content Include="Vendors\ServiceStack.Interfaces.dll" />
+    <Content Include="Vendors\ServiceStack.ServiceInterface.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MasterRedis-3.2.100\dump.rdb" />
+    <None Include="Resources\MasterRedis-3.2.100\redis.windows-service.conf" />
+    <None Include="Resources\MasterRedis-3.2.100\redis.windows.conf" />
+    <None Include="Resources\MasterRedis-3.2.100\安装.bat" />
+    <None Include="Resources\SlaveRedis-3.2.100\dump.rdb" />
+    <None Include="Resources\SlaveRedis-3.2.100\redis.windows-service.conf" />
+    <None Include="Resources\SlaveRedis-3.2.100\redis.windows.conf" />
+    <None Include="Resources\SlaveRedis-3.2.100\redis.windows.conf.bak" />
+    <None Include="Resources\SlaveRedis-3.2.100\安装.bat" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
